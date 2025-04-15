@@ -12,10 +12,11 @@ def get_image(id):
     image=ani['data']['images']['jpg']['image_url']
     return image
 
+file='https://drive.google.com/file/d/1nk1dQdq907O6_thlexQYG79N-GT8VepZ/view?usp=sharing'
 anime=pickle.load(open('anime_di.pkl','rb'))
 anime_d=pd.DataFrame(anime)
 
-sim=pickle.load(open('similar.pkl','rb'))
+sim=pickle.load(open('file','rb'))
 
 print(anime_d['title'])
 
