@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import jikan4snek
 import requests
 
 base_url="https://api.jikan.moe/v4/"
