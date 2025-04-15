@@ -1,0 +1,13 @@
+import requests
+
+base_url="https://api.jikan.moe/v4/"
+
+def get_image(id):
+    url=f"{base_url}anime/{id}/full"
+    res=requests.get(url)
+    ani=res.json()
+    print(ani)
+    image=ani['data']['images']['jpg']['image_url']
+    return image
+
+get_image(40748)
