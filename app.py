@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 import os
 
-bigfile_name = "similar.pkl"
+sim = "similar.pkl"
 
 if not os.path.exists(bigfile_name): 
     with st.spinner("Downloading..."):
@@ -13,7 +13,7 @@ if not os.path.exists(bigfile_name):
 
         # Download and save
         with requests.get(url, stream=True) as r, open(bigfile_name, "wb") as f:
-            sim=shutil.copyfileobj(r.raw, f)
+            shutil.copyfileobj(r.raw, f)
 
 base_url="https://api.jikan.moe/v4/"
 
