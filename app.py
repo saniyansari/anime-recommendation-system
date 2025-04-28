@@ -3,6 +3,17 @@ import pickle
 import pandas as pd
 import requests
 
+bigfile_name = "similar.pkl"
+
+if not os.path.exists(bigfile_name): 
+    with st.spinner("Downloading..."):
+        # URL to a publicly accessible link
+        url = "https://drive.google.com/uc?id=1nk1dQdq907O6_thlexQYG79N-GT8VepZ&export=download&confirm=yes"
+
+        # Download and save
+        with requests.get(url, stream=True) as r, open(bigfile_name, "wb") as f:
+            sim=shutil.copyfileobj(r.raw, f)
+
 base_url="https://api.jikan.moe/v4/"
 
 def get_image(id):
@@ -15,7 +26,7 @@ def get_image(id):
 anime=pickle.load(open('anime_di.pkl','rb'))
 anime_d=pd.DataFrame(anime)
 
-sim=pickle.load(open('similar.pkl','rb'))
+#sim=pickle.load(open('similar.pkl','rb'))
 
 
 def search(movie):
