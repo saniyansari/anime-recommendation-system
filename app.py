@@ -12,7 +12,7 @@ if not os.path.exists(sim):
         url = "https://drive.google.com/uc?id=1nk1dQdq907O6_thlexQYG79N-GT8VepZ&export=download&confirm=yes"
 
         # Download and save
-        with requests.get(url, stream=True) as r, open(bigfile_name, "wb") as f:
+        with requests.get(url, stream=True) as r, open(sim, "wb") as f:
             shutil.copyfileobj(r.raw, f)
 
 base_url="https://api.jikan.moe/v4/"
