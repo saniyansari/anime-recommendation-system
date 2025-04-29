@@ -6,7 +6,7 @@ import os
 import shutil
 bigfile = "similar.pkl"
 
-if not os.path.exists(sim): 
+if not os.path.exists(bigfile): 
     with st.spinner("Downloading..."):
         # URL to a publicly accessible link
         url = "https://drive.google.com/uc?id=1nk1dQdq907O6_thlexQYG79N-GT8VepZ&export=download&confirm=yes"
