@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import requests
 import os
-
+import shutil
 sim = "similar.pkl"
 
 if not os.path.exists(sim): 
