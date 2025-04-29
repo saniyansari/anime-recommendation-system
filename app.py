@@ -27,8 +27,8 @@ def get_image(id):
 anime=pickle.load(open('anime_di.pkl','rb'))
 anime_d=pd.DataFrame(anime)
 
-#sim=pickle.load(open(bigfile,'rb'))
-sim=pd.read_pickle(bigfile)
+sim=pickle.load(open(bigfile,'rb'))
+#sim=pd.read_pickle(bigfile)
 
 
 def search(movie):
